@@ -1,0 +1,14 @@
+Tube RSS : An unofficial London Underground travel delays feed creator
+
+Note: this script deos not currently work due to changes on the TfL site.
+
+Transport for London (TfL), operators of the London Underground (or Tube as it is more commonly known) designed a nice website but did
+not provide rss feeds of live information (such as delays to the Tube). I wrote this to provide just that. Unfortunetly it proved popular 
+enough to bring my machine to a grinding halt, and in any event since writing it TfL have changed their site *and* now provide rss feeds 
+(of a sort).
+
+I provide my code in case it proves useful to someone doing something similar.
+
+Legal crap: 
+I am not, and do not claim to be, connected with TfL or London Underground Limited. 
+Do not use this for anything important, I accept no liability, use at your own risk, there be dragons, etc....
