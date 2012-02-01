@@ -8,8 +8,9 @@ use HTML::TreeBuilder;
 use XML::RSS;
 
 my $ROOT_URL = 'http://www.tfl.gov.uk/tfl/livetravelnews/realtime/tube';
-#my $url="$ROOT_URL/default.html";
-my $url="http://conor.net/code/tube/tfl-sample-v2.1.html";
+my $url="$ROOT_URL/default.html";
+#my $url="file://./tfl-sample-v2.1.html";
+my $emailaddr="example\@example.example"; #change this
 my $FEEDS_DIR='../../feeds/';
 my $FILE_RSS="${FEEDS_DIR}rss/tube.xml";
 my $CURRENT_TIME = time;
@@ -18,8 +19,8 @@ my $TTL_MINUTES = 10;
 my $TTL = ($TTL_MINUTES * 60);
 #my $TTL = 1;
 my $UA = LWP::UserAgent->new;
-$UA->agent('Tubebot/1,0 http://conor.net/code/tube/');
-$UA->from('info@conor.net');
+$UA->agent('Tubebot/2.1');
+$UA->from($email_addr);
 my $doc = HTML::TreeBuilder->new;
 
 &run;
@@ -95,15 +96,15 @@ my $rss = new XML::RSS (version => '2.0');
 $rss->channel(title          => 'London Tube Status',
               link           => $url,
 	      language       => 'en',
-	      description    => 'Latest tube line status - http://conor.net/code/tube/ v2.0(08/01/2008)',
+	      description    => 'Latest tube line status',
 	      copyright      => '(C) 2010 TfL',
 	      pubDate        => $FORMATTED_TIME,
 	      lastBuildDate  => $FORMATTED_TIME,
 	      ttl	     => $TTL_MINUTES,
-	      docs           => 'http://conor.net/code/tube/',
-	      generator      => 'Conor Keegan',
-	      managingEditor => 'info@conor.net',
-	      webMaster      => 'info@conor.net'
+	      docs           => '',
+	      generator      => '',
+	      managingEditor => '',
+	      webMaster      => ''
 );
 
 
