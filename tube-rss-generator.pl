@@ -8,8 +8,8 @@ use HTML::TreeBuilder;
 use XML::RSS;
 
 my $ROOT_URL = 'http://www.tfl.gov.uk/tfl/livetravelnews/realtime/tube';
-my $url="$ROOT_URL/default.html";
-#my $url="http://conor.net/code/tube/tfl-sample.html";
+#my $url="$ROOT_URL/default.html";
+my $url="http://conor.net/code/tube/tfl-sample-v2.1.html";
 my $FEEDS_DIR='../../feeds/';
 my $FILE_RSS="${FEEDS_DIR}rss/tube.xml";
 my $CURRENT_TIME = time;
@@ -69,7 +69,7 @@ foreach (@dt){
 
 	}
 
-	#print "DEBUG: $tube->{line}, $tube->{status}, $tube->{statusurl}, $tube->{details}\n ";
+	print "DEBUG: $tube->{line}, $tube->{status}, $tube->{statusurl}, $tube->{details}\n ";
 	push @tubes, $tube;
 	$counter++;
 }
